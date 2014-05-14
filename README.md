@@ -29,4 +29,12 @@ Usage
             _loginViewModel.ShouldHave(expression: x => x.UserName, 
                 attributes: typeof (RequiredAttribute));
         }
+        
+        [Test]
+        public void UserName_Should_Have_A_Maximum_Length_Of_256_Characters()
+        {
+            _loginViewModel.ShouldHave(expression: x => x.UserName, 
+                defaultArgumentValue: 256,
+                attributes: typeof (StringLengthAttribute));
+        }
 
