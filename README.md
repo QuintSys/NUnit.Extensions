@@ -27,7 +27,6 @@ Usage
         public void UserName_Should_Be_Required()
         {
             _loginViewModel.ShouldHave(expression: x => x.UserName, 
-                defaultArgumentValue: false, 
                 attributes: typeof (RequiredAttribute));
         }
 
